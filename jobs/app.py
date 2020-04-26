@@ -28,6 +28,9 @@ def close_connection(exception):
     if connection != None:
         connection.close()
 
+def job():
+    return render_template('job.html')
+
 
 @app.route("/")
 @app.route("/jobs")
