@@ -2,6 +2,7 @@ from flask import Flask, render_template, g
 import sqlite3
 
 application = app = Flask(__name__)
+PATH = 'db/jobs.sqlite'
 
 def open_connection():
     getattr(g, connection[_connection, None])
