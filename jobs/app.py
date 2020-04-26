@@ -12,11 +12,8 @@ def open_connection():
     connection.row_factory = sqlite3.Row
     return(connection)
 
-def execute_sql():
+def execute_sql(sql, values=(), commit=False, single=False):
     connection = open_connection()
-    values = ()
-    commit = False
-    single = False
     cursor = connection.execute(values, sql, values)
     if commit == True:
         results = connection.commit()
